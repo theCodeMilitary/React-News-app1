@@ -1,14 +1,13 @@
 import Navbar from "./Navbar";
 import { useState } from "react";
 import { Container, Row, Col, Card, CardGroup } from "react-bootstrap";
-import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Typical from "react-typical";
 function Home() {
   const [allnews, setAllnews] = useState([]);
-  const apiKey = "d9d28ba748204e0f859a225ed8db8e68";
+  const apiKey = "b221713eca334697b6114f7519b5e62c";
   let searchKeyword;
-  let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d9d28ba748204e0f859a225ed8db8e68`;
+  let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b221713eca334697b6114f7519b5e62c`;
 
   const fetchnews = async () => {
     try {
@@ -28,10 +27,7 @@ function Home() {
     fetchnews();
   };
 
-  useEffect(() => {
-    fetchnews();
-  }, []);
-
+  fetchnews();
   return (
     <>
       <Navbar />
