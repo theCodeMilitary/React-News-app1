@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Typical from "react-typical";
 function Home() {
   const [allnews, setAllnews] = useState([]);
-  const apiKey = "b221713eca334697b6114f7519b5e62c";
+  const apiKey = "1b2b297165964c88958fa40762f9349e";
   let searchKeyword;
-  let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b221713eca334697b6114f7519b5e62c`;
+  let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
 
   const fetchnews = async () => {
     try {
